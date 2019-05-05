@@ -2,7 +2,7 @@
 
 MAC="$(echo $1 | sed 's/ //g' | sed 's/-//g' | sed 's/://g' | cut -c1-6)";
 
-result="$(grep -i -A 4 ^$MAC ./oui.txt)";
+result="$(grep -i -A 4 ^$MAC /mac/oui.txt)";
 
 if [ "$result" ]; then
     echo "For the MAC $1 the following information is found:"
